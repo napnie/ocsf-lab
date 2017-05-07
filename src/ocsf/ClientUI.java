@@ -86,8 +86,8 @@ public class ClientUI extends JFrame implements Observer {
 		connectPanel.add(connect);
 		connectPanel.add(quit);
 		
-		final int column = 50;
-		text = new JTextArea(20, column);
+		final int WIDTH = 50;
+		text = new JTextArea(20, WIDTH);
 		text.setEditable(false);
 		text.setLineWrap(true);
 		JScrollPane scroll = new JScrollPane(text);
@@ -95,7 +95,7 @@ public class ClientUI extends JFrame implements Observer {
 		DefaultCaret caret = (DefaultCaret) text.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 		
-		prompt = new JTextField(column);
+		prompt = new JTextField(WIDTH);
 		prompt.addActionListener( (event) -> sendPrompt() );
 		
 		this.setLayout(new BorderLayout());
